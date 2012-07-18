@@ -18,7 +18,7 @@
 	<property name="serversrc.dir" value="${mcp.dir}/src/minecraft_server" />
 
 	<property name="mcp.version" value="62" />
-	<property name="forge.version" value="3.3.8.152" />
+	<property name="forge.version" value="3.3.8.164" />
 	<property name="coins.version" value="0" />
 	<property name="coins.version.full" value="${coins.version}.${BUILD_NUMBER}" />
 
@@ -30,8 +30,7 @@
 		<delete dir="${build.dir}" />
 	</target>
 
-	<target name="setup">
-
+	<target name="download">
 		<mkdir dir="${download.dir}" />
 
 		<get src="http://mcp.ocean-labs.de/files/mcp${mcp.version}.zip" dest="${download.dir}" usetimestamp="True" />
@@ -53,11 +52,17 @@
 			<fileset dir="${files.minecraft.dir}" />
 		</copy>
 
+		<chmod file="${mcp.dir}/cleanup.sh" perm="+x"/>
+		<chmod file="${mcp.dir}/decompile.sh" perm="+x"/>
+		<chmod file="${mcp.dir}/startclient.sh" perm="+x"/>
+		<chmod file="${mcp.dir}/startserver.sh" perm="+x"/>
 		<chmod file="${mcp.dir}/updatemd5.sh" perm="+x" />
 		<chmod file="${mcp.dir}/recompile.sh" perm="+x" />
 		<chmod file="${mcp.dir}/reobfuscate.sh" perm="+x" />
 		<chmod file="${forge.dir}/install.sh" perm="+x" />
+	</target>
 
+	<target name="setup" depends="download">
 		<!-- Install forge -->
 		<exec dir="${forge.dir}" executable="cmd" osfamily="windows">
 			<arg line="/c install.cmd" />
