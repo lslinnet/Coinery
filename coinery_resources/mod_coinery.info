@@ -1,0 +1,19 @@
+[
+{
+  "modid": "mod_Coinery",
+  "name": "Coinery",
+  "description": "Adds a new element of currency to Minecraft - it is now possible to create your own servers coin which is resembled ingame as actually coins",
+  "version": "",
+  "credits": "Created by Gloombone",
+  "logoFile": "/gfx/coinery/logo.png",
+  "mcversion": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "Gloombone" ],
+  "parent": "",
+  "screenshots: [],
+  "dependencies": [
+    "mod_MinecraftForge"
+  ]
+}
+]
