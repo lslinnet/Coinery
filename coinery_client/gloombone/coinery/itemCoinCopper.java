@@ -1,4 +1,4 @@
-package net.minecraft.src
+package gloombone.coinery;
 
 import net.minecraft.src.Item;
 import net.minecraft.src.forge.ITextureProvider;

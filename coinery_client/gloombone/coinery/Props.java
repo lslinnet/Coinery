@@ -1,4 +1,4 @@
-package net.minecraft.src
+package gloombone.coinery;
 
 import java.io.File;
 import java.io.IOException;

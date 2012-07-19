@@ -1,4 +1,4 @@
-package net.minecraft.src;
+package gloombone.coinery;
 
 import net.minecraft.src.BaseMod; //BaseMod
 import net.minecraft.src.Block;
