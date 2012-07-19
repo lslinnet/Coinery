@@ -60,6 +60,8 @@
 		<chmod file="${mcp.dir}/recompile.sh" perm="+x" />
 		<chmod file="${mcp.dir}/reobfuscate.sh" perm="+x" />
 		<chmod file="${forge.dir}/install.sh" perm="+x" />
+		<chmod file="${mcp.dir}/runtime/bin/astyle-osx" perm="+x" />
+		<chmod file="${mcp.dir}/runtime/bin/jad-osx" perm="+x" />
 	</target>
 
 	<target name="setup" depends="download">
@@ -73,6 +75,8 @@
 		</exec>
 
 		<!-- Copy Coinery source -->
+		<symlink link="${clientsrc.dir}/gloombone" resource="${src.dir}/coinery_client/gloombone"/> 
+		<!--
 		<copy todir="${clientsrc.dir}">
 			<fileset dir="${src.dir}/coinery_client"/>
 		</copy>
@@ -84,7 +88,7 @@
 				<filter token="VERSION" value="${coins.version}"/>
 			</filterset>
 		</copy>
-
+-->
 		<copy todir="${serversrc.dir}">
 			<fileset dir="${src.dir}/coinery_server"/>
 		</copy>
