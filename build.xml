@@ -75,7 +75,7 @@
 		</exec>
 
 		<!-- Copy Coinery source -->
-		<symlink link="${clientsrc.dir}/gloombone" resource="${src.dir}/coinery_client/gloombone"/> 
+		<symlink link="../${clientsrc.dir}/gloombone" resource="../../../../${src.dir}/coinery_client/gloombone"/> 
 		<!--
 		<copy todir="${clientsrc.dir}">
 			<fileset dir="${src.dir}/coinery_client"/>
