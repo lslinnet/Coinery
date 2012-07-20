@@ -1,15 +1,19 @@
 package gloombone.coinery;
 
-import net.minecraft.src.BaseMod; //BaseMod
+import net.minecraft.src.BaseMod; //BaseMod 
 import net.minecraft.src.Block;
 import net.minecraft.src.Item; // The item class
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.ModLoader; // ModLoader
+import net.minecraft.src.forge.*;
+import net.minecraft.src.forge.oredict.OreDictionary;
 
 public class mod_coinery extends BaseMod {
 
         public static Item itemCoinCopper;
-
+        public static CopperOreHandler copperOreHandler;
+        
+        
         @Override
         public String getVersion() {
                 return "0.0.1";
@@ -19,6 +23,9 @@ public class mod_coinery extends BaseMod {
         public void load() {
                 this.addNames();
                 this.registerRecipes();
+                
+                copperOreHandler = new CopperOreHandler();
+                OreDictionary.registerOreHandler(copperOreHandler);
         }
 
         private void addNames() {
