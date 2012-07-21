@@ -12,7 +12,12 @@ public class Props {
         public static Configuration config;
 
         public static int iCoinCopperID;
-
+        public static int iCoinTinID;
+        public static int iCoinIronID;
+        public static int iCoinBronzeID;
+        public static int iCoinSilverID;
+        public static int iCoinGoldID;
+        
         public static void initProps(String mod) {
 
                 // Creating a folder for the mod in the folder config within the minecraft folder.
@@ -40,6 +45,11 @@ public class Props {
 
                 // Custom confis - start
                 iCoinCopperID = config.getOrCreateIntProperty("itemCopperCoin", "item", 7321).getInt(7321);
+                iCoinTinID = config.getOrCreateIntProperty("itemTinCoin", "item", 7322).getInt(7322);
+                iCoinIronID = config.getOrCreateIntProperty("itemIronCoin", "item", 7323).getInt(7323);
+                iCoinBronzeID = config.getOrCreateIntProperty("itemBronzeCoin", "item", 7324).getInt(7324);
+                iCoinSilverID = config.getOrCreateIntProperty("itemSilverCoin", "item", 7325).getInt(7325);
+                iCoinGoldID = config.getOrCreateIntProperty("itemGoldCoin", "item", 7326).getInt(7326);
                 // Custom confis - end
                 // save the data
                 config.save();
