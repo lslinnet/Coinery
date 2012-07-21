@@ -10,54 +10,59 @@ import net.minecraft.src.forge.oredict.OreDictionary;
 
 public class mod_coinery extends BaseMod {
 
-		// The different coins
-        public static Item itemCoinCopper;
-        public static Item itemCoinTin;
-        public static Item itemCoinIron;
-        public static Item itemCoinBronze;
-        public static Item itemCoinSilver;
-        public static Item itemCoinGold;
+  // The different coins
+  public static Item itemCoinCopper;
+  public static Item itemCoinTin;
+  public static Item itemCoinIron;
+  public static Item itemCoinBronze;
+  public static Item itemCoinSilver;
+  public static Item itemCoinGold;
 
-        public static CoineryOreHandler CoineryOreHandler;
-        
-        
-        @Override
-        public String getVersion() {
-                return "0.0.1";
-        }
+  public static CoineryOreHandler CoineryOreHandler;
 
-        @Override
-        public void load() {
-                this.addNames();
-               
-                CoineryOreHandler = new CoineryOreHandler();
-                OreDictionary.registerOreHandler(CoineryOreHandler);
-                
-                this.registerRecipes();
-        }
+  @Override
+  public String getVersion() {
+    return "0.0.1";
+  }
 
-        private void addNames() {
-                ModLoader.addName(itemCoinCopper, "Copper coin");
-                ModLoader.addName(itemCoinTin, "Tin coin");
-                ModLoader.addName(itemCoinIron, "Iron coin");
-                ModLoader.addName(itemCoinBronze, "Bronze coin");
-                ModLoader.addName(itemCoinSilver, "Silver coin");
-                ModLoader.addName(itemCoinGold, "Gold coin");
-        }
+  @Override
+  public void load() {
+    this.addNames();
 
-        private void registerRecipes() {
+    CoineryOreHandler = new CoineryOreHandler();
+    OreDictionary.registerOreHandler(CoineryOreHandler);
 
-        }
+    this.registerRecipes();
+  }
 
-        static {
-                Props.initProps("coins");
+  private void addNames() {
+    ModLoader.addName(itemCoinCopper, "Copper coin");
+    ModLoader.addName(itemCoinTin, "Tin coin");
+    ModLoader.addName(itemCoinIron, "Iron coin");
+    ModLoader.addName(itemCoinBronze, "Bronze coin");
+    ModLoader.addName(itemCoinSilver, "Silver coin");
+    ModLoader.addName(itemCoinGold, "Gold coin");
+  }
 
-                itemCoinCopper = new itemCoin(Props.iCoinCopperID).setIconCoord(0, 0).setItemName("Copper coin");
-                itemCoinTin = new itemCoin(Props.iCoinTinID).setIconCoord(0, 0).setItemName("Tin coin");
-                itemCoinIron = new itemCoin(Props.iCoinIronID).setIconCoord(0, 0).setItemName("Iron coin");
-                itemCoinBronze = new itemCoin(Props.iCoinBronzeID).setIconCoord(0, 0).setItemName("Bronze coin");
-                itemCoinSilver = new itemCoin(Props.iCoinSilverID).setIconCoord(0, 0).setItemName("Silver coin");
-                itemCoinGold = new itemCoin(Props.iCoinGoldID).setIconCoord(0, 0).setItemName("Gold coin");
-        }
+  private void registerRecipes() {
+
+  }
+
+  static {
+    Props.initProps("coins");
+
+    itemCoinCopper = new itemCoin(Props.iCoinCopperID).setIconCoord(0, 0)
+        .setItemName("Copper coin");
+    itemCoinTin = new itemCoin(Props.iCoinTinID).setIconCoord(0, 0)
+        .setItemName("Tin coin");
+    itemCoinIron = new itemCoin(Props.iCoinIronID).setIconCoord(0, 0)
+        .setItemName("Iron coin");
+    itemCoinBronze = new itemCoin(Props.iCoinBronzeID).setIconCoord(0, 0)
+        .setItemName("Bronze coin");
+    itemCoinSilver = new itemCoin(Props.iCoinSilverID).setIconCoord(0, 0)
+        .setItemName("Silver coin");
+    itemCoinGold = new itemCoin(Props.iCoinGoldID).setIconCoord(0, 0)
+        .setItemName("Gold coin");
+  }
 
 }
