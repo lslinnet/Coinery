@@ -26,16 +26,14 @@ public class Props {
     file.mkdir(); // create the folder.
 
     // getting the config file
-    File newFile = new File(Minecraft.getMinecraftDir() + "/config/" + mod
-        + "main.cfg");
+    File newFile = new File(Minecraft.getMinecraftDir() + "/config/" + mod + "main.cfg");
 
     // Try to create the config file
     try {
       newFile.createNewFile();
       System.out.println("Successfully created/read configuration file");
     } catch (IOException e) {
-      System.out
-          .println("Could not create configuration file for mod_coins. Reason:");
+      System.out.println("Could not create configuration file for mod_coins. Reason:");
       System.out.println(e);
     }
 
